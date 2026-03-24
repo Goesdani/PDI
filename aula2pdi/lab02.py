@@ -14,8 +14,8 @@ noise = np.random.normal(0, 25, img.shape).astype('uint8')
 noisy_img = cv2.add(img, noise)
 
 # Aplicar diferentes filtros:
-gaussian = cv2.GaussianBlur(noisy_img, (3,3),0)
-median = cv2.medianBlur(noisy_img, 3)
+gaussian = cv2.GaussianBlur(noisy_img, (5,5),0)
+median = cv2.medianBlur(noisy_img, 5)
 bilateral = cv2.bilateralFilter(noisy_img, 9, 75, 75)
 
 # Imprimir resultados:
